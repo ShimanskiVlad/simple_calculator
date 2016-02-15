@@ -10,12 +10,6 @@ public class Calculator {
 		else if (Operation.SUBTRACTION == operation) {
 			return operand1 - operand2;
 		}
-		else if (Operation.MULTIPLICATION == operation) {
-			return operand1 * operand2;
-		}
-		else if (Operation.DIVISION == operation) {
-			return operand1 / operand2;
-		}
 		return result;
 	}
 	

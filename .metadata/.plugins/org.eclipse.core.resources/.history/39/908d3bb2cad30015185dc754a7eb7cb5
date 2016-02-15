@@ -1,5 +1,5 @@
 package by.iba.shimanski.calculator;
 
 public enum Operation {
-	ADDITION, SUBTRACTION, MULTIPLICATION, DIVISION
+	ADDITION, SUBTRACTION
 }

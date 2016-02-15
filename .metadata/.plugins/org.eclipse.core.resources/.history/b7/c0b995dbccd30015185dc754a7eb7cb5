@@ -9,7 +9,15 @@ public class MyInput {
 	public static double inputDouble() {
 		double d = 0;
 		System.out.println("Input number:");
-		while (true) {
+		while (true) {			
+			/*if (sc.hasNextDouble()) {				
+				d = sc.nextDouble();
+				break;
+			}
+			else {
+				d = inputDouble();
+				break;
+			}*/
 			try{
 				d = Double.parseDouble(sc.next());
 				break;
@@ -24,8 +32,9 @@ public class MyInput {
 		Operation operation = null;
 		String temp = null;
 		temp = sc.nextLine();
+		//System.out.println("Input operation(+, -):");
 		do {
-			System.out.println("Input operation(+, -, *, /):");
+			System.out.println("Input operation(+, -):");
 			temp = sc.nextLine();
 			operation = getOperation(temp);
 		}
@@ -42,18 +51,12 @@ public class MyInput {
 			case "-":
 				operation = Operation.SUBTRACTION;
 				break;
-			case "*":
-				operation = Operation.MULTIPLICATION;
-				break;
-			case "/":
-				operation = Operation.DIVISION;
-				break;
 		}
 		return operation;
 	}
 	
 	private static boolean checkOperation(String s) {
-		if ("+".equals(s) || "-".equals(s) || "*".equals(s) || "/".equals(s)) {
+		if ("+".equals(s) || "-".equals(s)) {
 			return true;
 		}
 		return false;

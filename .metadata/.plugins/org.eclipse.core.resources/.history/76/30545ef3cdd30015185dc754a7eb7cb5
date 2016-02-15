@@ -1,0 +1,5 @@
+package by.iba.shimanski.calculator;
+
+public class CalculatorView {
+
+}
