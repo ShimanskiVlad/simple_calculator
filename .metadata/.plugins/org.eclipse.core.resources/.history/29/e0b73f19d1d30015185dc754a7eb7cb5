@@ -19,9 +19,6 @@ public class Calculator {
 		else if (Operation.POW.equals(operation)) {
 			return Math.pow(operand1, operand2);
 		}
-		else if (Operation.REMAINDER.equals(operation)) {
-			return operand1 % operand2;
-		}
 		return result;
 	}
 	

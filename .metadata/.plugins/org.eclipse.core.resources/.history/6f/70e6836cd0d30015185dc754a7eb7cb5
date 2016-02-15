@@ -17,7 +17,7 @@ public class CalculatorView {
 		System.out.println("Success!");
 		double d2 = MyInput.inputDouble();
 		System.out.println("Success!");
-		String operation = MyInput.inputOperation();
+		Operation operation = MyInput.inputOperation();
 		System.out.println("Success!");
 		System.out.println(d1 + " " + operation + " " + d2 + " = " + Calculator.calculate(d1, d2, operation));
 	}

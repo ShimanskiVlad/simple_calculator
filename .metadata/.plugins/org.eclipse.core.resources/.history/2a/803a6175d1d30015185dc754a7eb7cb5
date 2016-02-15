@@ -23,13 +23,7 @@ public class MyInput {
 	public static String inputOperation() {
 		String operation = sc.nextLine();
 		do {
-			System.out.println("Input operation("
-					+ Operation.ADDITION + ", " +
-					Operation.DIVISION + ", " +
-					Operation.MULTIPLICATION + ", " +
-					Operation.POW + ", " + 
-					Operation.REMAINDER + ", " +
-					Operation.SUBTRACTION + "):");
+			System.out.println("Input operation(+, -, *, /, ^, %):");
 			operation = sc.nextLine();
 		}
 		while (checkOperation(operation) == false);

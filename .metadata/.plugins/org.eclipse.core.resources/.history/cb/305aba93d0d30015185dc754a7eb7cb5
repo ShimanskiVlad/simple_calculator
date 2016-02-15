@@ -21,15 +21,10 @@ public class MyInput {
 	}
 	
 	public static String inputOperation() {
-		String operation = sc.nextLine();
+		String operation = null;
+		temp = sc.nextLine();
 		do {
-			System.out.println("Input operation("
-					+ Operation.ADDITION + ", " +
-					Operation.DIVISION + ", " +
-					Operation.MULTIPLICATION + ", " +
-					Operation.POW + ", " + 
-					Operation.REMAINDER + ", " +
-					Operation.SUBTRACTION + "):");
+			System.out.println("Input operation(+, -, *, /, ^):");
 			operation = sc.nextLine();
 		}
 		while (checkOperation(operation) == false);
@@ -41,8 +36,7 @@ public class MyInput {
 				Operation.SUBTRACTION.equals(s) ||
 				Operation.MULTIPLICATION.equals(s) || 
 				Operation.DIVISION.equals(s) || 
-				Operation.POW.equals(s) ||
-				Operation.REMAINDER.equals(s)) {
+				Operation.POW.equals(s)) {
 			return true;
 		}
 		return false;
