@@ -29,7 +29,11 @@ public class MyInput {
 					Operation.MULTIPLICATION + ", " +
 					Operation.POW + ", " + 
 					Operation.REMAINDER + ", " +
-					Operation.SUBTRACTION + "):");
+					Operation.SUBTRACTION + ", " +
+					Operation.MAX + ", " +
+					Operation.MIN + ", " +
+					Operation.HYPOT + ", " +
+					Operation.IEEEREMAINDER + "):");
 			operation = sc.nextLine();
 		}
 		while (checkOperation(operation) == false);
@@ -42,7 +46,11 @@ public class MyInput {
 				Operation.MULTIPLICATION.equals(s) || 
 				Operation.DIVISION.equals(s) || 
 				Operation.POW.equals(s) ||
-				Operation.REMAINDER.equals(s)) {
+				Operation.REMAINDER.equals(s) ||
+				Operation.MAX.equals(s) ||
+				Operation.MIN.equals(s) ||
+				Operation.HYPOT.equals(s) ||
+				Operation.IEEEREMAINDER.equals(s)) {
 			return true;
 		}
 		return false;

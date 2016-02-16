@@ -1,0 +1,10 @@
+package by.iba.shimanski.calculator;
+
+public class Operation {
+	public static final String ADDITION = "+";
+	public static final String SUBTRACTION = "-"; 
+	public static final String MULTIPLICATION = "*"; 
+	public static final String DIVISION = "/"; 
+	public static final String POW = "^";
+	public static final String REMAINDER = "%";
+}

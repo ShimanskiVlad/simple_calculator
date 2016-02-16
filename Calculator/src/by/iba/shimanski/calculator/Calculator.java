@@ -22,6 +22,18 @@ public class Calculator {
 		else if (Operation.REMAINDER.equals(operation)) {
 			return operand1 % operand2;
 		}
+		else if (Operation.MAX.equals(operation)) {
+			return Math.max(operand1, operand2);
+		}
+		else if (Operation.MIN.equals(operation)) {
+			return Math.min(operand1, operand2);
+		}
+		else if (Operation.HYPOT.equals(operation)) {
+			return Math.hypot(operand1, operand2);
+		}
+		else if (Operation.IEEEREMAINDER.equals(operation)) {
+			return Math.IEEEremainder(operand1, operand2);
+		}
 		return result;
 	}
 	
