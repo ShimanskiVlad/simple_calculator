@@ -1,0 +1,34 @@
+package by.iba.shimanski.calculator;
+
+import java.util.Scanner;
+
+public class CalculatorView {
+
+	public void go() {
+		do {
+			iteration();
+		}
+		while (exit() == false);
+		System.out.println("Thank you! Good bye!");
+	}
+	
+	private void iteration() {
+		double d1 = MyInput.inputDouble();
+		System.out.println("Success!");
+		double d2 = MyInput.inputDouble();
+		System.out.println("Success!");
+		String operation = MyInput.inputOperation();
+		System.out.println("Success!");
+		System.out.println(d1 + " " + operation + " " + d2 + " = " + Calculator.calculate(d1, d2, operation));
+	}
+	
+	private boolean exit() {
+		System.out.println("Press Q for exit or something else for continue.");
+		Scanner sc = new Scanner(System.in);
+		String s = sc.next();
+		if ("q".equals(s) || "Q".equals(s)) {
+			return true;
+		}
+		return false;
+	}
+}

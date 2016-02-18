@@ -1,2 +1,4 @@
 1455532542715	Delete element
 1455532557264	Rename type 'Operation2'
+1455793117417	Rename field 'typeValue'
+1455793161539	Rename method 'getTypeValue'

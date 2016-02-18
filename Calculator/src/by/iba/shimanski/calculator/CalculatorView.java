@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class CalculatorView {
 
 	public void go() {
+		System.out.println("Hello! You just need to input 2 numbers, available operation from the list and you will see a result :)");
 		do {
 			iteration();
 		}
@@ -13,19 +14,20 @@ public class CalculatorView {
 	}
 	
 	private void iteration() {
-		double d1 = MyInput.inputDouble();
-		System.out.println("Success!");
-		double d2 = MyInput.inputDouble();
-		System.out.println("Success!");
-		String operation = MyInput.inputOperation();
-		System.out.println("Success!");
-		System.out.println(d1 + " " + operation + " " + d2 + " = " + Calculator.calculate(d1, d2, operation));
+		double d1 = MyInput.inputDouble("1st");
+		System.out.println("Success!\n");
+		double d2 = MyInput.inputDouble("2nd");
+		System.out.println("Success!\n");
+		Operation operation = MyInput.inputOperation();
+		System.out.println("Success!\n");
+		System.out.println(d1 + " " + operation + " " + d2 + " = " + Calculator.calculate(d1, d2, operation) + "\n");
 	}
 	
 	private boolean exit() {
 		System.out.println("Press Q for exit or something else for continue.");
 		Scanner sc = new Scanner(System.in);
 		String s = sc.next();
+		System.out.println();
 		if ("q".equals(s) || "Q".equals(s)) {
 			return true;
 		}

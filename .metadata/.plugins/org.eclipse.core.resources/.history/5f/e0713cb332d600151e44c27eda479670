@@ -1,0 +1,21 @@
+package by.iba.shimanski.calculator;
+
+public class Calculator {
+			
+	public static double calculate(double operand1, double operand2, Operation operation) {
+		switch(operation) {
+		case Operation.ADDITION:
+			return operand1 + operand2;
+		case "-":
+			return operand1 - operand2;
+		case "*": 
+			return operand1 * operand2;
+		case "/":
+			return operand1 / operand2; 
+		case "^"
+		}
+		
+		return 0;
+	}
+	
+}

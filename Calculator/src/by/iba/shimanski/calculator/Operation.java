@@ -1,14 +1,42 @@
 package by.iba.shimanski.calculator;
 
-public class Operation {
-	public static final String ADDITION = "+";
-	public static final String SUBTRACTION = "-"; 
-	public static final String MULTIPLICATION = "*"; 
-	public static final String DIVISION = "/"; 
-	public static final String POW = "^";
-	public static final String REMAINDER = "%";
-	public static final String MAX = "max";
-	public static final String MIN = "min";
-	public static final String HYPOT = "hypot"; //x^2 + y^2
-	public static final String IEEEREMAINDER = "IEEEremainder";
+public enum Operation {
+	ADDITION("+"),
+	SUBTRACTION("-"),
+	MULTIPLICATION("*"),
+	DIVISION("/"),
+	POW("^"),
+	REMAINDER("%"),
+	MAX("max"),
+	MIN("min"),
+	HYPOT("hypot"),
+	IEEEREMAINDER("IEEEremainder");
+	
+	private String value;
+	
+	private Operation(String type) {
+		value = type;
+	}
+	
+	public String getValue() {
+		return value;
+	}
+
+	public static boolean hasOperation(String s) {
+		for (Operation oper: Operation.values()) {
+			if (oper.getValue().equals(s)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public static Operation getOperation(String s) {
+		for (Operation oper: Operation.values()) {
+			if (oper.getValue().equals(s)) {
+				return oper;
+			}
+		}
+		return null;
+	}
 }

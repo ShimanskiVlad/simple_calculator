@@ -6,9 +6,9 @@ public class MyInput {
 	
 	private static Scanner sc = new Scanner(System.in);
 	
-	public static double inputDouble() {
+	public static double inputDouble(String s) {
 		double d = 0;
-		System.out.println("Input number:");
+		System.out.println("Input " + s + " number:");
 		while (true) {
 			try{
 				d = Double.parseDouble(sc.next());
@@ -20,40 +20,21 @@ public class MyInput {
 		return d;
 	}
 	
-	public static String inputOperation() {
+	public static Operation inputOperation() {
 		String operation = sc.nextLine();
+		Operation result;
 		do {
-			System.out.println("Input operation("
-					+ Operation.ADDITION + ", " +
-					Operation.DIVISION + ", " +
-					Operation.MULTIPLICATION + ", " +
-					Operation.POW + ", " + 
-					Operation.REMAINDER + ", " +
-					Operation.SUBTRACTION + ", " +
-					Operation.MAX + ", " +
-					Operation.MIN + ", " +
-					Operation.HYPOT + ", " +
-					Operation.IEEEREMAINDER + "):");
+			System.out.println("Input operation from the the list:");
+			Operation[] operations = Operation.values();
+			for (Operation oper : operations) {
+				System.out.print(oper.getValue() + " ");
+			}
+			System.out.println();
 			operation = sc.nextLine();
+			result = Operation.getOperation(operation);
 		}
-		while (checkOperation(operation) == false);
-		return operation;
+		while (Operation.hasOperation(operation) == false);
+		return result;
 	}
 	
-	private static boolean checkOperation(String s) {
-		if (Operation.ADDITION.equals(s) || 
-				Operation.SUBTRACTION.equals(s) ||
-				Operation.MULTIPLICATION.equals(s) || 
-				Operation.DIVISION.equals(s) || 
-				Operation.POW.equals(s) ||
-				Operation.REMAINDER.equals(s) ||
-				Operation.MAX.equals(s) ||
-				Operation.MIN.equals(s) ||
-				Operation.HYPOT.equals(s) ||
-				Operation.IEEEREMAINDER.equals(s)) {
-			return true;
-		}
-		return false;
-	}
-
 }

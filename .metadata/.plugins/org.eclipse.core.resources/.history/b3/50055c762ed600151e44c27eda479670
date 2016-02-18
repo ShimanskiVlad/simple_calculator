@@ -1,0 +1,46 @@
+package by.iba.shimanski.calculator;
+
+/*public class Operation {
+	public static final String ADDITION = "+";
+	public static final String SUBTRACTION = "-"; 
+	public static final String MULTIPLICATION = "*"; 
+	public static final String DIVISION = "/"; 
+	public static final String POW = "^";
+	public static final String REMAINDER = "%";
+	public static final String MAX = "max";
+	public static final String MIN = "min";
+	public static final String HYPOT = "hypot"; //x^2 + y^2
+	public static final String IEEEREMAINDER = "IEEEremainder";
+}*/
+
+public enum Operation {
+	ADDITION("+"),
+	SUBTRACTION("-"),
+	MULTIPLICATION("*"),
+	DIVISION("/"),
+	POW("^"),
+	REMAINDER("%"),
+	MAX("max"),
+	MIN("min"),
+	HYPOT("hypot"),
+	IEEEREMAINDER("IEEEremainder");
+	
+private String typeValue;
+	
+	private Operation(String type) {
+		typeValue = type;
+	}
+	
+	static public Operation getType(String pType) {
+		for (Operation type: Operation.values()) {
+			if (type.getTypeValue().equals(pType)) {
+				return type;
+			}
+		}
+		throw new RuntimeException("unknown type");
+	}
+	
+	public String getTypeValue() {
+		return typeValue;
+	}
+}

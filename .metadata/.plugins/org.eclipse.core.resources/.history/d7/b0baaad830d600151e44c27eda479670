@@ -1,0 +1,25 @@
+package by.iba.shimanski.calculator;
+
+public enum Operation {
+	ADDITION("+"),
+	SUBTRACTION("-"),
+	MULTIPLICATION("*"),
+	DIVISION("/"),
+	POW("^"),
+	REMAINDER("%"),
+	MAX("max"),
+	MIN("min"),
+	HYPOT("hypot"),
+	IEEEREMAINDER("IEEEremainder");
+	
+	private String value;
+	
+	private Operation(String type) {
+		value = type;
+	}
+	
+	public String getValue() {
+		return value;
+	}
+
+}
